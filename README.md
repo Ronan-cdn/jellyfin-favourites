@@ -3,14 +3,15 @@ An extremely simple python script to import audio favourites from users in jelly
 
 This will create m3u files for each user in jellyfin, containing all the audio files they have marked as a favourite.
 
-#Sample usage (as root):
-cd /tmp
-cp /var/lib/jellyfin/data/library.db .
-jellyfinfav2m3u --shuffle --database library.db
+Sample usage (as root):
 
-Favourites for userid=3
-Wrote 261 to file 00-Favourites-3.m3u
-Favourites for userid=7
-Wrote 60 to file 00-Favourites-7.m3u
-Favourites for userid=1
-Wrote 78 to file 00-Favourites-1.m3u
+    cd /tmp
+    cp /var/lib/jellyfin/data/library.db .
+    jellyfinfav2m3u --shuffle --database library.db
+    
+    Favourites for userid=3
+    Wrote 261 to file 00-Favourites-3.m3u
+    Favourites for userid=7
+    Wrote 60 to file 00-Favourites-7.m3u
+    Favourites for userid=1
+    Wrote 78 to file 00-Favourites-1.m3u
