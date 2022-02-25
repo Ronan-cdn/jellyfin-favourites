@@ -3,6 +3,8 @@ An extremely simple python script to import audio favourites from users in jelly
 
 This will create m3u files for each user in jellyfin, containing all the audio files they have marked as a favourite.
 
+This is useful in Android auto, where the jellyfin app doesn't have way to play user's favorites.
+
 Sample usage (as root):
 
     cd /tmp
