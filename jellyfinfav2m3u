@@ -48,8 +48,9 @@ for row in cur.execute('SELECT userId,key FROM UserDatas WHERE isFavorite=1'):
 for userid in favourites:
     print('Favourites for userid='+str(userid))
     entries = list()
+    query='SELECT Path FROM TypedBaseItems WHERE type="MediaBrowser.Controller.Entities.Audio.Audio" AND UserDataKey=?'
     for userdatakey in favourites[userid]:
-        for entry in cur.execute('SELECT Path FROM TypedBaseItems WHERE type="MediaBrowser.Controller.Entities.Audio.Audio" AND UserDataKey="' + userdatakey + '"'):
+        for entry in cur.execute(query, [userdatakey]):
             entries.append(entry[0])
     if args.shuffle:
         shuffle(entries)
